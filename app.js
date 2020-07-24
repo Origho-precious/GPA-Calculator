@@ -76,7 +76,7 @@ calculate.addEventListener('click', () => {
 
     if(courseCode.length > 0 || courseGrade.length > 0 || creditUnit.length > 0){
         for(let i = 0; i < courseCode.length; i++){
-            if(courseGrade[i].value !== '' && courseCode[i].value !== '' && (creditUnit[i].value !== '' && creditUnit[i].value !== 'e')){
+            if(courseGrade[i].value !== 'select' && courseCode[i].value !== '' && (creditUnit[i].value !== '' && creditUnit[i].value !== 'e')){
                 courseCodes.push(courseCode[i].value);
                 courseGrades.push(courseGrade[i].value);
                 creditUnits.push(creditUnit[i].value);
