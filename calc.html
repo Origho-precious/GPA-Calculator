@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculate Your GPA</title>
+        <meta name="description" content="CGPA calculator for Nigerian universities">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/240142b5be.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="container-fluid mb-5">
+            <div class="text-center bg-info text-white py-5 mb-5">
+                <h2>Add Courses and Calculate!</h2>
+            </div>
+            <div class="row mx-md-5">
+                <div class="col-md-6 d-sm-none d-md-block">
+                    <img src="./assets/undraw_data_processing_yrrv.svg" alt="calulator-image" class="img-fluid">
+                </div>
+                <div class="text-center col-md-6">
+                    <button id="add-course" class="text-white mb-4 px-5 py-2 btn btn-info btn-lg">Add Course</button>
+                    <button id="calc" class="text-white mb-4 px-5 py-2 btn btn-success btn-lg">Calculate</button>
+                    <p id="alert" class="alert alert-danger" role="alert">Please, Fill inputs correctly!</p>
+                    <h3 id="resultEl" class="alert alert-success" role="alert"></h3>
+                    <div class="input-wrapper" id="inputWrapper">
+                        <div class="inputs" id="inputs">
+                            <input id="course-code" type="text" class="h-100 form-control" placeholder="Enter Course Code">
+                            <select id="course-grade" class="h-100 form-control">
+                                <option>Select Grade</option>
+                                <option value="5">A(70-100)</option>
+                                <option value="4">B(60-69)</option>
+                                <option value="3">C(50-59)</option>
+                                <option value="2">D(45-49)</option>
+                                <option value="1">E(40-44)</option>
+                                <option value="0">F(0-39)</option>
+                            </select>
+                            <input id="credit-unit" type="number" class="h-100 form-control" placeholder="Enter Credit Unit">
+                            <p id="delete"><i class="fas fa-trash"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="./app.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #3A3768;
+}
+
+.input-wrapper .inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.1fr;
+    grid-gap: 2rem 1rem;
+    background: #029ACF;
+    padding: 2rem 1.5rem;
+    height: 110px;
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.input-wrapper #delete{
+    color: rgb(206, 94, 94);
+    font-size: 1.2rem;
+    position: relative;
+    top: 0.7rem;
+}
+
+.input-wrapper #delete:hover{
+    color:red;
+}
+
+#alert,
+#resultEl{
+    display: none;
+}
