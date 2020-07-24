@@ -6,7 +6,6 @@ const calculate = document.getElementById('calc');
 const courseCode = document.querySelectorAll('#course-code');
 const courseGrade = document.querySelectorAll('#course-grade');
 const creditUnit = document.querySelectorAll('#credit-unit');
-const delBtn = document.getElementById('delete');
 const alert = document.getElementById('alert');
 const resultEl = document.getElementById('resultEl');
 
@@ -30,6 +29,8 @@ class Course {
             TQP.push(grades[i] * units[i]);
         }
         
+        // Getting the sum of Quality Points
+        // grade point * credit unit
         totalQualityPoints = TQP.reduce((prevVal,cureVal) => {
             return prevVal + cureVal
         }, 0);
@@ -41,7 +42,10 @@ class Course {
             return prevVal + cureVal
         }, 0);
 
+        // GPA 
         result =  (totalQualityPoints / totalCreditUnits).toFixed(2);
+        
+        // Display GPA
         resultEl.style.display = 'block';
         resultEl.textContent = `Your GPA: ${result}`;
         setTimeout(() => {
@@ -51,13 +55,16 @@ class Course {
 
 }
 
+// Instantiating a Course Object
 const course = new Course(courseCode.value, courseGrade.value, creditUnit.value)
 
+// Cloning Course Fields
 addCourse.addEventListener('click', () => {
     const newInputs = inputs.cloneNode(true);
     inputWrapper.appendChild(newInputs);
 })
 
+// Validating Input fields && Passing it for Calcultion
 calculate.addEventListener('click', () => {
     const courseCode = document.querySelectorAll('#course-code');
     const courseGrade = document.querySelectorAll('#course-grade');
@@ -85,6 +92,9 @@ calculate.addEventListener('click', () => {
     }
 })
 
-delBtn.addEventListener('click', (e) => {
-    
+// Deleting Course Input
+inputWrapper.addEventListener('click', (e) => {
+    if(e.target.id === 'delete'){
+        e.target.parentElement.parentElement.remove()
+    }
 })
