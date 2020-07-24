@@ -35,3 +35,30 @@ body{
 #resultEl{
     display: none;
 }
+
+@media(max-width: 900px){
+    #calc-img{
+        display: none;
+    }
+}
+
+@media(max-width: 900px){
+    #calc-img{
+        display: none;
+    }
+
+    .input-wrapper .inputs{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        background: #029ACF;
+        padding: 2rem 1.5rem 1rem;
+        height: 100%;
+        border-radius: 0.7rem;
+        margin-bottom: 1.5rem;
+    }
+        
+    .input-wrapper #delete{
+        top: 0rem;
+    }
+}
